@@ -246,7 +246,7 @@ namespace EternalHUD
                 {
                     if (!MyMod.ItemDict.TryGetValue(sub.TemplateId, out var subRef)) continue;
                     int p = subRef.MarketPrice > 0 ? subRef.MarketPrice : (subRef.HandbookPrice > 0 ? subRef.HandbookPrice : 1);
-                    total += p * (sub.StackObjectsCount > 1 ? sub.StackObjectsCount : 1);
+                    total += p;// * (sub.StackObjectsCount > 1 ? sub.StackObjectsCount : 1);
                 }
                 return total;
             }
